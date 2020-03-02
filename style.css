@@ -2,7 +2,97 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   font-family: 'Comfortaa', sans-serif;
+}
+
+body {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+h1 {
+  position: relative;
+}
+
+h1 button {
+  position: absolute;
+  right: 0;
+  transform: translate(120%, -50%);
+  z-index: 2;
+}
+
+.btn {
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.btn-small {
+  font-size: 12px;
+  padding: 5px 10px;
+}
+
+.btn-ghost {
+  border: 0;
+  background-color: transparent;
+}
+
+.clear {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+}
+
+.cards {
+  perspective: 1000px;
+  position: relative;
+  width: 400px;
+  height: 500px;
+  max-width: 100%;
+}
+
+.card {
+  position: absolute;
+  opacity: 0;
+  font-size: 1.5em;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.card.active {
+  opacity: 1;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.inner-card {
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.inner-card-front,
+.inner-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
 }
