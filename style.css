@@ -56,7 +56,7 @@ h1 button {
   perspective: 1000px;
   position: relative;
   width: 400px;
-  height: 500px;
+  height: 250px;
   max-width: 100%;
 }
 
@@ -124,12 +124,69 @@ h1 button {
 
 .inner-card-front::after,
 .inner-card-back::after {
-  content: '\f021 Flip';
   font-family: 'Font Awesome 5 Free', 'Comfortaa', sans-serif;
+  font-weight: 900;
+  content: 'Flip';
   position: absolute;
   right: 10px;
   top: 10px;
   color: #ddd;
   font-size: 16px;
-  font-weight: bold;
+}
+
+#navigation {
+  display: flex;
+  margin: 20px 0;
+}
+
+#navigation .nav-button {
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#navigation p {
+  margin: 0 25px;
+}
+
+.add-container {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: #f0f0f0;
+  border-top: 2px solid #eee;
+  z-index: -1;
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+.add-container.show {
+  z-index: 2;
+  opacity: 1;
+}
+
+.add-container h3 {
+  margin: 10px 0;
+}
+
+.form-group label {
+  display: block;
+  margin: 20px 0 10px;
+}
+
+.form-group textarea {
+  min-width: 500px;
+  max-width: 100%;
+  padding: 12px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 16px;
 }
