@@ -85,7 +85,7 @@ h1 button {
 }
 
 .card.show-answer .inner-card {
-  transform: rotate(180deg);
+  transform: rotateX(180deg);
 }
 
 .inner-card {
